@@ -1,0 +1,76 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: angular
+    appMajor: "1"
+    instance: digpres.lib.unb.ca
+    tier: backend
+    uri: digpres.lib.unb.ca
+    vcsOwner: unb-libraries
+    vcsRepository: digpres.lib.unb.ca
+    vcsRef: prod
+  name: digpres-lib-unb-ca
+  namespace: prod
+spec:
+  selector:
+    matchLabels:
+      uri: digpres.lib.unb.ca
+  replicas: 1
+  revisionHistoryLimit: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: angular
+        appMajor: "1"
+        instance: digpres.lib.unb.ca
+        tier: backend
+        uri: digpres.lib.unb.ca
+        vcsOwner: unb-libraries
+        vcsRepository: digpres.lib.unb.ca
+        vcsRef: prod
+    spec:
+      nodeSelector:
+        deployenv: prod
+      containers:
+        -
+          name: digpres-lib-unb-ca
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 4000
+            initialDelaySeconds: 65
+            timeoutSeconds: 3
+            periodSeconds: 15
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 4000
+            initialDelaySeconds: 130
+            timeoutSeconds: 3
+            periodSeconds: 15
+          env:
+            -
+              name: DEPLOY_ENV
+              value: prod
+            -
+              name: DSPACE_REST_HOST
+              value: digpres.dspace.lib.unb.ca
+            -
+              name: DSPACE_REST_PORT
+              value: '443'
+          image: "||DEPLOYMENTIMAGE||"
+          imagePullPolicy: Always
+          ports:
+            -
+              containerPort: 4000
+      priorityClassName: high-priority-services
+      imagePullSecrets:
+        -
+          name: github-container-registry-auth
+      restartPolicy: Always

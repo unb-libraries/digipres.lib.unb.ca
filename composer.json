@@ -1,0 +1,23 @@
+{
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    },
+    "preferred-install": {
+      "*": "dist"
+    }
+  },
+  "description": "Scaffold and provision local development for digpres.lib.unb.ca",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "name": "unb-libraries/digpres.lib.unb.ca",
+  "prefer-stable": true,
+  "require-dev": {
+    "unb-libraries/dockworker": "^5"
+  },
+  "scripts": {
+    "post-update-cmd": [
+      "vendor/bin/dockworker dockworker:git:setup-hooks"
+    ]
+  }
+}
