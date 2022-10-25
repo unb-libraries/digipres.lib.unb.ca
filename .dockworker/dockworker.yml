@@ -12,15 +12,20 @@ dockworker:
     uuid: 3102
   deployment:
     environments:
+      - dev
       - prod
     local:
       localhost_hostnames:
         - digipres.dspace.lib.unb.ca
+    workflow:
+      source: dockworker
+      type: deployment-workflow
   github:
     repo: digipres.lib.unb.ca
     owner: unb-libraries
   image:
     push_branches:
+      - dev
       - prod
     name: ghcr.io/unb-libraries/digipres.lib.unb.ca
     date_tag_image: true
