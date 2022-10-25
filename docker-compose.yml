@@ -1,21 +1,21 @@
 services:
-  digpres.lib.unb.ca:
+  digipres.lib.unb.ca:
     build:
       args:
         DSPACE_REST_PORT: '8080'
         DSPACE_REST_SSL: 'false'
       context: .
     restart: unless-stopped
-    container_name: digpres.lib.unb.ca
+    container_name: digipres.lib.unb.ca
     env_file:
       - ./env/dspace.env
     expose:
       - "4000"
     networks:
-      - digpres.lib.unb.ca
+      - digipres.lib.unb.ca
     ports:
       - "9988:4000"
-  digpres.dspace.lib.unb.ca:
+  digipres.dspace.lib.unb.ca:
     build:
       context: dspace/
     restart: unless-stopped
@@ -26,8 +26,8 @@ services:
     ports:
       - "8080:8080"
     networks:
-      - digpres.lib.unb.ca
-  digpres.postgres.lib.unb.ca:
+      - digipres.lib.unb.ca
+  digipres.postgres.lib.unb.ca:
     build:
       context: postgres/
     restart: unless-stopped
@@ -36,8 +36,8 @@ services:
     expose:
       - "5432"
     networks:
-      - digpres.lib.unb.ca
-  digpres-solr-lib-unb-ca:
+      - digipres.lib.unb.ca
+  digipres-solr-lib-unb-ca:
     build:
       context: solr/
     restart: unless-stopped
@@ -46,7 +46,7 @@ services:
     expose:
       - "8080"
     networks:
-      - digpres.lib.unb.ca
+      - digipres.lib.unb.ca
 networks:
-  digpres.lib.unb.ca:
-    name: digpres.lib.unb.ca
+  digipres.lib.unb.ca:
+    name: digipres.lib.unb.ca

@@ -7,10 +7,10 @@
       "*": "dist"
     }
   },
-  "description": "Scaffold and provision local development for digpres.lib.unb.ca",
+  "description": "Scaffold and provision local development for digipres.lib.unb.ca",
   "license": "MIT",
   "minimum-stability": "dev",
-  "name": "unb-libraries/digpres.lib.unb.ca",
+  "name": "unb-libraries/digipres.lib.unb.ca",
   "prefer-stable": true,
   "require-dev": {
     "unb-libraries/dockworker": "^5"

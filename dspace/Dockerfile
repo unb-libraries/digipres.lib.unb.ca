@@ -1,1 +1,1 @@
-FROM ghcr.io/unb-libraries/digpres.dspace.lib.unb.ca:prod
+FROM ghcr.io/unb-libraries/digipres.dspace.lib.unb.ca:prod

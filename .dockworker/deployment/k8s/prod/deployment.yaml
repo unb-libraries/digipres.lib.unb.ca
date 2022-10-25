@@ -4,18 +4,18 @@ metadata:
   labels:
     app: angular
     appMajor: "1"
-    instance: digpres.lib.unb.ca
+    instance: digipres.lib.unb.ca
     tier: backend
-    uri: digpres.lib.unb.ca
+    uri: digipres.lib.unb.ca
     vcsOwner: unb-libraries
-    vcsRepository: digpres.lib.unb.ca
+    vcsRepository: digipres.lib.unb.ca
     vcsRef: prod
-  name: digpres-lib-unb-ca
+  name: digipres-lib-unb-ca
   namespace: prod
 spec:
   selector:
     matchLabels:
-      uri: digpres.lib.unb.ca
+      uri: digipres.lib.unb.ca
   replicas: 1
   revisionHistoryLimit: 2
   strategy:
@@ -28,18 +28,18 @@ spec:
       labels:
         app: angular
         appMajor: "1"
-        instance: digpres.lib.unb.ca
+        instance: digipres.lib.unb.ca
         tier: backend
-        uri: digpres.lib.unb.ca
+        uri: digipres.lib.unb.ca
         vcsOwner: unb-libraries
-        vcsRepository: digpres.lib.unb.ca
+        vcsRepository: digipres.lib.unb.ca
         vcsRef: prod
     spec:
       nodeSelector:
         deployenv: prod
       containers:
         -
-          name: digpres-lib-unb-ca
+          name: digipres-lib-unb-ca
           readinessProbe:
             httpGet:
               path: /
@@ -60,7 +60,7 @@ spec:
               value: prod
             -
               name: DSPACE_REST_HOST
-              value: digpres.dspace.lib.unb.ca
+              value: digipres.dspace.lib.unb.ca
             -
               name: DSPACE_REST_PORT
               value: '443'

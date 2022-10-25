@@ -1,12 +1,12 @@
-# [digpres.lib.unb.ca](https://digpres.lib.unb.ca/) : Lean Instance Repository
-[![Build Status](https://github.com/unb-libraries/digpres.lib.unb.ca/actions/workflows/deployment-workflow.yaml/badge.svg?branch=prod)](https://github.com/unb-libraries/digpres.lib.unb.ca/actions/workflows/deployment-workflow.yaml)
-[![GitHub license](https://img.shields.io/github/license/unb-libraries/digpres.lib.unb.ca)](https://github.com/unb-libraries/digpres.lib.unb.ca/blob/prod/LICENSE)
-![GitHub repo size](https://img.shields.io/github/repo-size/unb-libraries/digpres.lib.unb.ca?label=lean%20repo%20size)
+# [digipres.lib.unb.ca](https://digipres.lib.unb.ca/) : Lean Instance Repository
+[![Build Status](https://github.com/unb-libraries/digipres.lib.unb.ca/actions/workflows/deployment-workflow.yaml/badge.svg?branch=prod)](https://github.com/unb-libraries/digipres.lib.unb.ca/actions/workflows/deployment-workflow.yaml)
+[![GitHub license](https://img.shields.io/github/license/unb-libraries/digipres.lib.unb.ca)](https://github.com/unb-libraries/digipres.lib.unb.ca/blob/prod/LICENSE)
+![GitHub repo size](https://img.shields.io/github/repo-size/unb-libraries/digipres.lib.unb.ca?label=lean%20repo%20size)
 
-This repository contains the assets used to test, build, and deploy the digpres.lib.unb.ca application.
+This repository contains the assets used to test, build, and deploy the digipres.lib.unb.ca application.
 
 ## Deploy this Application Yourself!
-Local deployment, development and testing of digpres.lib.unb.ca is easy, as we leverage [dockworker](https://github.com/unb-libraries/dockworker), our unified framework of [Robo](https://robo.li/) commands that streamline local development of our application on Linux or OSX.
+Local deployment, development and testing of digipres.lib.unb.ca is easy, as we leverage [dockworker](https://github.com/unb-libraries/dockworker), our unified framework of [Robo](https://robo.li/) commands that streamline local development of our application on Linux or OSX.
 
 ### Step 1: Install Dockworker's Dependencies
 In your local development environment, a minimal number of 'one time' dependencies are required to deploy applications with dockworker. Some or all of these may already be installed in your environment; see the list of dependencies and installation instructions [here](https://github.com/unb-libraries/dockworker/blob/4.x/docs/prerequisites.md).
@@ -33,6 +33,6 @@ This application was created at [![UNB Libraries](https://github.com/unb-librari
 
 ## License
 - As part of our 'open' ethos, UNB Libraries licenses its applications and workflows to be freely available to all whenever possible.
-- Consequently, the contents of this repository [unb-libraries/digpres.lib.unb.ca] are licensed under the [MIT License](http://opensource.org/licenses/mit-license.html). This license explicitly excludes:
+- Consequently, the contents of this repository [unb-libraries/digipres.lib.unb.ca] are licensed under the [MIT License](http://opensource.org/licenses/mit-license.html). This license explicitly excludes:
    - Any website content, which remains the exclusive property of its author(s).
    - The UNB logo and any of the associated suite of visual identity assets, which remains the exclusive property of the University of New Brunswick.

@@ -1,13 +1,13 @@
 dockworker:
   version: '5'
   application:
-    name: digpres.lib.unb.ca
+    name: digipres.lib.unb.ca
     finish_marker: 'Listening at'
-    project_prefix: DIGPRES
+    project_prefix: digipres
     upstream_images:
-      - ghcr.io/unb-libraries/digpres.dspace.lib.unb.ca:prod
-      - ghcr.io/unb-libraries/digpres.postgres.lib.unb.ca:prod
-      - ghcr.io/unb-libraries/digpres.solr.lib.unb.ca:prod
+      - ghcr.io/unb-libraries/digipres.dspace.lib.unb.ca:prod
+      - ghcr.io/unb-libraries/digipres.postgres.lib.unb.ca:prod
+      - ghcr.io/unb-libraries/digipres.solr.lib.unb.ca:prod
       - node:12-alpine
     uuid: 3102
   deployment:
@@ -15,13 +15,13 @@ dockworker:
       - prod
     local:
       localhost_hostnames:
-        - digpres.dspace.lib.unb.ca
+        - digipres.dspace.lib.unb.ca
   github:
-    repo: digpres.lib.unb.ca
+    repo: digipres.lib.unb.ca
     owner: unb-libraries
   image:
     push_branches:
       - prod
-    name: ghcr.io/unb-libraries/digpres.lib.unb.ca
+    name: ghcr.io/unb-libraries/digipres.lib.unb.ca
     date_tag_image: true
     repository: ghcr

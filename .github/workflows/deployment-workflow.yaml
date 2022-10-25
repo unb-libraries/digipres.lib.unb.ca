@@ -1,4 +1,4 @@
-name: digpres.lib.unb.ca
+name: digipres.lib.unb.ca
 
 on:
   pull_request:

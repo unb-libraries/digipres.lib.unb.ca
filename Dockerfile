@@ -5,7 +5,7 @@ WORKDIR /app
 ARG DSPACE_REFSPEC=dspace-7.2
 ENV DSPACE_HOST 0.0.0.0
 
-ARG DSPACE_REST_HOST=digpres.dspace.lib.unb.ca
+ARG DSPACE_REST_HOST=digipres.dspace.lib.unb.ca
 ARG DSPACE_REST_NAMESPACE=/server
 ARG DSPACE_REST_PORT=443
 ARG DSPACE_REST_SSL=true
@@ -36,11 +36,11 @@ LABEL ca.unb.lib.generator="nginx" \
   com.microscaling.docker.dockerfile="/Dockerfile" \
   com.microscaling.license="MIT" \
   org.label-schema.build-date=$BUILD_DATE \
-  org.label-schema.description="digpres.lib.unb.ca is an institutional repository initiative of UNB Libraries intended to collect, preserve, showcase, and promote the open access scholarly output of the UNB community." \
-  org.label-schema.name="digpres.lib.unb.ca" \
+  org.label-schema.description="digipres.lib.unb.ca is an institutional repository initiative of UNB Libraries intended to collect, preserve, showcase, and promote the open access scholarly output of the UNB community." \
+  org.label-schema.name="digipres.lib.unb.ca" \
   org.label-schema.schema-version="1.0" \
   org.label-schema.vcs-ref=$VCS_REF \
-  org.label-schema.vcs-url="https://github.com/unb-libraries/digpres.lib.unb.ca" \
+  org.label-schema.vcs-url="https://github.com/unb-libraries/digipres.lib.unb.ca" \
   org.label-schema.vendor="University of New Brunswick Libraries" \
   org.label-schema.version=$VERSION \
-  org.opencontainers.image.source="https://github.com/unb-libraries/digpres.lib.unb.ca"
+  org.opencontainers.image.source="https://github.com/unb-libraries/digipres.lib.unb.ca"
